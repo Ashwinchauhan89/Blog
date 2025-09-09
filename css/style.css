@@ -77,6 +77,86 @@ header {
   color: white;
 }
 
+
+
+/* ========== HERO SECTION ========== */
+.hero-section {
+  background: url('https://wallpapers.com/images/hd/coding-background-9izlympnd0ovmpli.jpg') no-repeat center center/cover;
+  height: 70vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.hero-section::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* dark overlay */
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  max-width: 900px;
+  padding: 0 1.5rem;
+}
+
+.hero-content h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.hero-content .highlight {
+  color: #00bfff;
+}
+
+.hero-content p {
+  font-size: 1.2rem;
+  color: #e0e0e0;
+}
+
+/* ======= RESPONSIVE HERO ======= */
+@media (max-width: 768px) {
+  .hero-content h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+  }
+
+  .hero-section {
+    height: 60vh;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1.7rem;
+  }
+
+  .hero-content p {
+    font-size: 0.95rem;
+  }
+
+  .hero-section {
+    height: 55vh;
+  }
+}
+
+
+
+
 /* Blog Section */
 .page-wrapper {
   padding: 2rem;
@@ -290,6 +370,76 @@ footer {
   font-size: 1rem;
   color: #333;
 }
+
+/* ========== Single Blog Post Page ========== */
+.single-post-wrapper {
+  max-width: 900px;
+  margin: 3rem auto;
+  padding: 0 1.5rem;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.single-post-title {
+  font-size: 2rem;
+  color: #2a2f4a;
+  margin-bottom: 1rem;
+  text-align: center;
+}
+
+.single-post-image {
+  width: 100%;
+  height: auto;
+  margin: 1rem 0 2rem;
+  border-radius: 6px;
+}
+
+.single-post-content h2 {
+  color: #2a2f4a;
+  font-size: 1.25rem;
+  margin-top: 1.5rem;
+}
+
+.single-post-content p {
+  margin: 0.8rem 0;
+  font-size: 1rem;
+  color: #555;
+}
+
+.back-link {
+  display: inline-block;
+  margin-top: 2rem;
+  text-decoration: none;
+  color: #00bfff;
+  font-weight: 600;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+
+.back-link {
+  display: inline-block;
+  padding: 0.6rem 1.2rem;
+  background-color: #00bfff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-weight: 600;
+  text-decoration: none;
+  font-size: 0.95rem;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  margin-top: 2rem;
+}
+
+.back-link:hover {
+  background-color: #009acd;
+  transform: translateY(-2px);
+}
+
+
 
 
 /* Responsive Navigation */
